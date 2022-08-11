@@ -22,10 +22,11 @@ function Popular() {
 
   return (
     <div>
-      {popularFoodData.map((recipe )=> {
+      {popularFoodData.map((recipe) => {
+        // console.log(recipe)
         return (
-          <div>
-            <p>{recipe.title }</p>
+          <div key={ recipe.id}>
+            <p >{recipe.title }</p>
             </div>
        )
       })}
