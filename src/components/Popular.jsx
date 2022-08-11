@@ -1,22 +1,36 @@
-import { useEffect } from "react"
-
+import { useEffect, useState } from "react"
 
 function Popular() {
-  useEffect(() => {
-    getPopular();
-  }, [])
+  const [popularFoodData, setPopularFoodData] = useState([])
+
+    useEffect(() => {
+      getPopular();
+    }, [])
+  
+  
 // api route 'https://api.spoonacular.com/recipes/random'
   const getPopular = async () => {
     const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_SPOON_API_KEY}&number=10`)
     const data = await api.json()
-    console.log(data)
+
+
+    setPopularFoodData(data.recipes)
   }
   
 
 
 
   return (
-    <div>Popular</div>
+    <div>
+      {popularFoodData.map((recipe )=> {
+        return (
+          <div>
+            <p>{recipe.title }</p>
+            </div>
+       )
+      })}
+
+    </div>
   )
 }
 
