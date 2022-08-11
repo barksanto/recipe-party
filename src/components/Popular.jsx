@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import styled from "styled-components";
 
 function Popular() {
   const [popularFoodData, setPopularFoodData] = useState([])
@@ -18,21 +19,40 @@ function Popular() {
   }
   
 
-
-
   return (
     <div>
       {popularFoodData.map((recipe) => {
         // console.log(recipe)
         return (
-          <div key={ recipe.id}>
-            <p >{recipe.title }</p>
-            </div>
+            <Wrapper>
+              <h3>Popular Dishes</h3>
+              {popularFoodData.map((recipe) => {
+                return (
+                  <Card key={recipe.id }>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt={recipe.title} />
+                  </Card>
+                )
+              })}
+            </Wrapper>
        )
       })}
 
     </div>
   )
 }
+
+const Wrapper = styled.div`
+margin: 4rem 0rem`
+
+const Card = styled.div`
+minHeight: 25rem;
+border-radius: 2rem;
+
+overflow: hidden;
+
+img{
+  border-radius: 2rem;
+}`
 
 export default Popular
