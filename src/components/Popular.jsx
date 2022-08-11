@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components";
-// import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import '@splidejs/react-splide/css';
 
 // temporary data to reduce API calls
 const tempFoodData = [
@@ -5637,37 +5638,47 @@ function Popular() {
 
   return (
     <div>
-      {popularFoodData.map((recipe) => {
-        // console.log(recipe)
-        return (
-           <Wrapper key={recipe.id}>  {/* Key goes on the outermost returned div */}
-              <h3>Popular Dishes</h3>
+          <Wrapper>  {/* Key goes on the outermost returned div */}
+            <h3>Popular Dishes</h3>
+            <Splide options={splideOptions}>
               {popularFoodData.map((recipe) => {
-                  return (
-                    <Card key={recipe.id}>
-                      <p>{recipe.title}</p>
-                      <img src={recipe.image} alt={recipe.title} />
-                    </Card>
+                return (
+                    <SplideSlide key={recipe.id}>
+                      <Card key={recipe.id}>
+                        <p>{recipe.title}</p>
+                        <img src={recipe.image} alt={recipe.title} />
+                      </Card>
+                    </SplideSlide>
                   )
                 })}
-            </Wrapper>
-       )
-      })}
-
+            </Splide>
+          </Wrapper>
     </div>
   )
 }
 
+const splideOptions = {
+  perPage: 4,
+  arrows: false,
+  drag: "free",
+  gap: "2rem",
+}
+
 const Wrapper = styled.div`
-margin: 4rem 0rem`
+margin: 4rem 0rem;`;
 
 const Card = styled.div`
 minHeight: 25rem;
+minWidth: 25rem;
 overflow: hidden;
 
 img{
   border-radius: 2rem;
   border: 2px solid black;
-}`
+  height: 200px;
+  maxWidth: 300px;
+  object-fit: cover;
+
+}`;
 
 export default Popular
