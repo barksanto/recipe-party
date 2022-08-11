@@ -1,4 +1,20 @@
+import { useEffect } from "react"
+
+
 function Popular() {
+  useEffect(() => {
+    getPopular();
+  }, [])
+// api route 'https://api.spoonacular.com/recipes/random'
+  const getPopular = async () => {
+    const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_SPOON_API_KEY}&number=10`)
+    const data = await api.json()
+    console.log(data)
+  }
+  
+
+
+
   return (
     <div>Popular</div>
   )
