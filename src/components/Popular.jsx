@@ -3,10 +3,6 @@ import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
 
-// temporary data to reduce API calls
-
-
-// console.log(tempFoodData)
 function Popular() {
   const [popularFoodData, setPopularFoodData] = useState([])
 
@@ -29,10 +25,6 @@ function Popular() {
       setPopularFoodData(data.recipes)
       console.log(data.recipes)
     }
-
-
-    // use temp data
-    // setPopularFoodData(tempFoodData)
   }
   
 
