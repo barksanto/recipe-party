@@ -5644,9 +5644,10 @@ function Popular() {
               {popularFoodData.map((recipe) => {
                 return (
                     <SplideSlide key={recipe.id}>
-                      <Card key={recipe.id}>
-                        <p>{recipe.title}</p>
-                        <img src={recipe.image} alt={recipe.title} />
+                    <Card key={recipe.id}>
+                       <p>{recipe.title}</p>
+                       <img src={recipe.image} alt={recipe.title} />
+                      <Gradient/>
                       </Card>
                     </SplideSlide>
                   )
@@ -5659,26 +5660,56 @@ function Popular() {
 
 const splideOptions = {
   perPage: 4,
-  arrows: false,
+  // arrows: false,
   drag: "free",
   gap: "2rem",
 }
 
 const Wrapper = styled.div`
-margin: 4rem 0rem;`;
+margin: 4rem 2rem;`;
 
 const Card = styled.div`
-minHeight: 25rem;
-minWidth: 25rem;
+min-height: 25rem;
+min-width: 25rem;
 overflow: hidden;
+/* position: relative; */
+
+
 
 img{
   border-radius: 2rem;
-  border: 2px solid black;
-  height: 200px;
-  maxWidth: 300px;
   object-fit: cover;
+  position: absolute;
+  height: 95%;
+  width: 100%;
+}
 
-}`;
+p{
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%);
+  color:white;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  height: 20%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  /* color: black; */
+  /* background-color: #fff; */
+  /* opacity: .5; */
+}
+`;
+
+const Gradient = styled.div`
+  /* z-index:3; */
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+`
 
 export default Popular
