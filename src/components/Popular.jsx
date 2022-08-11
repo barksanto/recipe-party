@@ -5644,10 +5644,10 @@ function Popular() {
               {popularFoodData.map((recipe) => {
                 return (
                     <SplideSlide key={recipe.id}>
-                    <Card key={recipe.id}>
-                       <p>{recipe.title}</p>
-                       <img src={recipe.image} alt={recipe.title} />
-                      <Gradient/>
+                      <Card>
+                        <p>{recipe.title}</p>
+                        <img src={recipe.image} alt={recipe.title} />
+                        <Gradient/>
                       </Card>
                     </SplideSlide>
                   )
@@ -5699,17 +5699,21 @@ p{
   display: flex;
   justify-content:center;
   align-items: center;
-  /* color: black; */
-  /* background-color: #fff; */
-  /* opacity: .5; */
+  color: white;
 }
+
+
+
+
 `;
 
 const Gradient = styled.div`
-  /* z-index:3; */
-  /* position: absolute; */
+  z-index:3;
+  position: absolute;
   width: 100%;
-  height: 100%;
+  height: 95%;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
+  border-radius: 2rem;
 `
 
 export default Popular
