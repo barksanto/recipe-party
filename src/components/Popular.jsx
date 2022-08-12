@@ -21,7 +21,7 @@ function Popular() {
       const data = await api.json()
 
       localStorage.setItem("popular", JSON.stringify(data.recipes))
-
+      
       setPopularFoodData(data.recipes)
       console.log(data.recipes)
     }
@@ -81,7 +81,7 @@ p{
   position: absolute;
   z-index: 10;
   left: 50%;
-  bottom: 0%;
+  bottom: 5%;
   transform: translate(-50%);
   color:white;
   width: 100%;
