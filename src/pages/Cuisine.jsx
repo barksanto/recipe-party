@@ -39,14 +39,15 @@ function Cuisine() {
 
 const Grid = styled.div`
 display: grid;
-grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));
-grid-gap: 3rem;
+grid-template-columns: repeat(auto-fit,minmax(15rem, 1fr));
+grid-gap: 2rem;
 `
 
 const Card = styled.div`
 img{
   width: 100%;
   border-radius: 2rem;
+  align-self: center;
 }
 
 a{
