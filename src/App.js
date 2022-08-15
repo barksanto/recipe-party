@@ -1,11 +1,16 @@
 import Pages from "./pages/Pages"
 import styled from "styled-components"
+import Category from "./components/Category"
+import { BrowserRouter } from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
       <BodyStyle>
-        <Pages />
+        <BrowserRouter>
+          <Category />
+          <Pages />
+        </BrowserRouter>
       </BodyStyle>
     </div>
   )
@@ -14,5 +19,5 @@ function App() {
 export default App
 
 const BodyStyle = styled.div`
-  margin: 0 auto;
+  /* margin: 0 auto; */
 `
