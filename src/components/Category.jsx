@@ -7,23 +7,42 @@ import { NavLink } from "react-router-dom";
 function Category() {
   return (
     <ButtonsContainerList>
-      <NavLink to={"/cuisine/Italian"} >
+      <div>
         <FaPizzaSlice />
         <h4>Italian</h4>
-      </NavLink >
-      <NavLink to={"/cuisine/American"}>
+      </div>
+      <div>
         <FaHamburger />
         <h4>American</h4>
-      </NavLink >
-      <NavLink to={"/cuisine/Thai"}>
+      </div >
+      <div>
         <GiNoodles />
         <h4>Thai</h4>
-      </NavLink >
-      <NavLink to={"/cuisine/Japanese"}>
+      </div>
+      <div>
         <GiChopsticks />
         <h4>Japanese</h4>
-      </NavLink >
+      </div >
     </ButtonsContainerList>
+    // <ButtonsContainerList>
+    //   <NavLink to={"/cuisine/Italian"} >
+    //     <FaPizzaSlice />
+    //     <h4>Italian</h4>
+    //   </NavLink >
+    //   <NavLink to={"/cuisine/American"}>
+    //     <FaHamburger />
+    //     <h4>American</h4>
+    //   </NavLink >
+    //   <NavLink to={"/cuisine/Thai"}>
+    //     <GiNoodles />
+    //     <h4>Thai</h4>
+    //   </NavLink >
+    //   <NavLink to={"/cuisine/Japanese"}>
+    //     <GiChopsticks />
+    //     <h4>Japanese</h4>
+    //   </NavLink >
+    // </ButtonsContainerList>
+
   )
 }
 
