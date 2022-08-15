@@ -12,7 +12,7 @@ function Home() {
 }
 
 const ContainerDiv = styled.div`
-height: 100%;
+/* height: 100%; */
 `
 
 export default Home
