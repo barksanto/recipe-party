@@ -1,18 +1,15 @@
 import Veggie from "../components/Veggie"
 import Popular from "../components/Popular"
-import styled from "styled-components";
+import Category from "../components/Category"
 
 function Home() {
   return (
-    <ContainerDiv>
+    <div>
+      <Category/>
       <Veggie />
-      <Popular/>
-    </ContainerDiv>
+      <Popular />
+  </div>
   )
 }
-
-const ContainerDiv = styled.div`
-/* height: 100%; */
-`
 
 export default Home
