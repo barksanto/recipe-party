@@ -61,8 +61,8 @@ const Wrapper = styled.div`
 margin: 4rem 2rem;`;
 
 const Card = styled.div`
-min-height: 20rem;
-min-width: 20rem;
+min-height: 25rem;
+min-width: 40rem;
 overflow: hidden;
 
 
@@ -79,7 +79,7 @@ p{
   position: absolute;
   z-index: 10;
   left: 50%;
-  bottom: 5%;
+  bottom: 10%;
   transform: translate(-50%);
   color:white;
   width: 100%;

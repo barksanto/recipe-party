@@ -14,7 +14,5 @@ function App() {
 export default App
 
 const BodyStyle = styled.div`
-  /* background-color: #e1f2fe; */
   margin: 0 auto;
-  height: 100vh;
 `
