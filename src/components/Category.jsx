@@ -1,5 +1,5 @@
 import {FaPizzaSlice, FaHamburger,FaUmbrellaBeach} from "react-icons/fa"
-import { GiNoodles, GiChopsticks } from "react-icons/gi"; 
+import { GiNoodles } from "react-icons/gi"; 
 import { SiAlfred } from "react-icons/si"
 import styled from "styled-components";
 import { NavLink } from "react-router-dom"; // using NavLink instead of Link because there is a class called active available
