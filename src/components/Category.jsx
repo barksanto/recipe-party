@@ -64,6 +64,16 @@ svg{
 
 &.active{
   background: linear-gradient(to right, #adeee3, #63b995);
+  opacity: 1.2;
+  border: 1px solid black;
+}
+
+h4{
+  color: white;
+}
+
+svg{
+  color: white;
 }
 `
 
