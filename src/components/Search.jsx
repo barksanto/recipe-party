@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { useState } from "react"; 
 import { FaSearch } from "react-icons/fa";
-import {useNavigate} from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
+
 
 function Search() {
   const [input, setInput] = useState("")
@@ -15,7 +16,9 @@ function Search() {
   return (
     <FormStyle onSubmit={submitHandler}>
       <div className="logo-title">
+        <Link to={"/"}>
         RecipeParty
+        </Link>
       </div>
       <div>
         <FaSearch ></FaSearch>
