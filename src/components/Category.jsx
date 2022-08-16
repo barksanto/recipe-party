@@ -1,5 +1,6 @@
-import {FaPizzaSlice, FaHamburger} from "react-icons/fa"
-import { GiNoodles, GiChopsticks } from "react-icons/gi";
+import {FaPizzaSlice, FaHamburger,FaUmbrellaBeach} from "react-icons/fa"
+import { GiNoodles, GiChopsticks } from "react-icons/gi"; 
+import { SiAlfred } from "react-icons/si"
 import styled from "styled-components";
 import { NavLink } from "react-router-dom"; // using NavLink instead of Link because there is a class called active available
 
@@ -20,11 +21,11 @@ function Category() {
         <h4>Thai</h4>
       </SLink>
       <SLink to={"/cuisine/German"}>
-        <GiChopsticks />
+        <SiAlfred />
         <h4>German</h4>
       </SLink >
        <SLink to={"/cuisine/Caribbean"}>
-        <GiChopsticks />
+        <FaUmbrellaBeach />
         <h4>Caribbean</h4>
       </SLink >
     </ButtonsContainerList>
@@ -66,15 +67,17 @@ svg{
   background: linear-gradient(to right, #adeee3, #63b995);
   opacity: 1.2;
   border: 1px solid black;
+
+  h4{
+    color: #313131;
+  }
+
+  svg{
+    color: #313131;
+  }
 }
 
-h4{
-  color: white;
-}
 
-svg{
-  color: white;
-}
 `
 
 
