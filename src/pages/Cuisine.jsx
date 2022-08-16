@@ -28,7 +28,7 @@ function Cuisine() {
       {cuisine.map((item) => {
         return (
           <Card key={item.id}>
-          <img src={item.image} alt="" />
+          <img src={item.image} alt={item.title} />
           <h4>{ item.title}</h4>
         </Card>
       )
@@ -58,7 +58,7 @@ h4{
   text-align: center;
   padding: 1rem;
 }
-  
 `
+
 
 export default Cuisine
