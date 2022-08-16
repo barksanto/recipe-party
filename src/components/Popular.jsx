@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
+import {Link} from "react-router-dom"
 
 function Popular() {
   const [popularFoodData, setPopularFoodData] = useState([])
@@ -35,12 +36,14 @@ function Popular() {
             <Splide options={splideOptions}>
               {popularFoodData.map((recipe) => {
                 return (
-                    <SplideSlide key={recipe.id}>
+                  <SplideSlide key={recipe.id}>
+                    <Link to={"/recipe/"+recipe.id}>
                       <Card>
                         <p>{recipe.title}</p>
                         <img src={recipe.image} alt={recipe.title} />
                         <Gradient/>
                       </Card>
+                    </Link>
                     </SplideSlide>
                   )
                 })}
