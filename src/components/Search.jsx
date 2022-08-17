@@ -22,7 +22,7 @@ function Search() {
       </div>
       <div>
         <FaSearch ></FaSearch>
-        <input onChange={(e) => setInput(e.target.value) } type="text" value={input } />
+        <input onChange={(e) => setInput(e.target.value) } type="text" value={input } placeholder="Search... 🧐"/>
       </div>
     </FormStyle>
   )
