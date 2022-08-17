@@ -37,7 +37,6 @@ function Recipe() {
         <ul>
           {
             details.extendedIngredients.map((ingredient) => {
-              console.log(ingredient.original)
               return <li key={ingredient.id}>{ingredient.original }</li>
             })
           }
@@ -85,6 +84,6 @@ const Info = styled.div`
 /* display: flex; */
 /* height: 50px; */
 /* flex-direction: row; */
-/* margin-left: 1rem; */
+margin-left: 2rem;
 `
 export default Recipe
