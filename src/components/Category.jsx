@@ -37,6 +37,7 @@ display:flex;
 /* flex-direction: row; */
 justify-content: space-around;
 margin: 2rem 0rem;
+border-bottom: 1px solid black;
 `
 
 const SLink = styled(NavLink)`
