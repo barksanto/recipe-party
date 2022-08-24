@@ -19,19 +19,23 @@ function Recipe() {
   return (
     <DetailWrapper className="detail-wrapper">
       
-      <div>
+      <div className="recipe-details">
         <h2>{details.title}</h2>
         <img src={details.image} alt="" />
       </div>
 
       <Info>
-        <Button className={activeTab === "instructions" ? "active" : ""} onClick={() => setActiveTab("instructions")}>Instructions</Button>
-        <Button className={activeTab === "ingredients" ? "active" : ""} onClick={() => setActiveTab("ingredients")}>Ingredients</Button>
+        <ButtonContainer className="button-container">
+          <Button className={activeTab === "instructions" ? "active" : ""} onClick={() => setActiveTab("instructions")}>Instructions</Button>
+          <Button className={activeTab === "ingredients" ? "active" : ""} onClick={() => setActiveTab("ingredients")}>Ingredients</Button>
+        </ButtonContainer>
+       
         {activeTab === "instructions" && 
           <div>
           <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
           <h3 dangerouslySetInnerHTML={{__html: details.instructions}}></h3>
-        </div>}
+          </div>
+        }
       
         {activeTab === "ingredients" &&
         <ul>
@@ -51,7 +55,6 @@ function Recipe() {
 
 
 const DetailWrapper = styled.div`
-margin-top: 10rem;
 margin-bottom: 5rem;
 display: flex;
 
@@ -73,6 +76,7 @@ ul{
   margin-top: 2rem;
 }
 `
+
 const Button = styled.button`
 padding: 1rem 2rem;
 color: #313131;
@@ -89,5 +93,10 @@ const Info = styled.div`
 margin-left: 2rem;
 `
 
-console.log(DetailWrapper)
+const ButtonContainer = styled.div`
+  display: flex;
+`
+
+
+
 export default Recipe

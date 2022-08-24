@@ -14,7 +14,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   
   /* background: linear-gradient(0.40turn,#adeee3, #9198e5); */
-  margin: 0% 10%;
+  margin: 0% 5%;
 }
 
 code {
@@ -36,6 +36,7 @@ h3 {
   color: rgb(56, 56, 56);
   line-height: 2.5rem;
   margin: 2rem 0rem;
+  text-align: justify;
 }
 
 
@@ -52,6 +53,26 @@ color: rgb(56, 56, 56);
 @media (max-width: 850px) {
   .detail-wrapper{
     flex-direction: column;
+  }
+
+  .button-container{
+    justify-content: center;
+  }
+
+  .recipe-details{
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    margin-top: 0;
+
+  }
+
+  .recipe-details img {
+    width: 80vw;
+    margin-bottom: 5px;
+    border-radius: 4px;
   }
 }
 
