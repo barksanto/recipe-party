@@ -82,7 +82,7 @@ padding: 1rem 2rem;
 color: #313131;
 background: white;
 border: 2px solid black;
-margin-right: 2rem;
+margin: 1rem;
 font-weight: 600;
 `
 
