@@ -90,7 +90,7 @@ const Info = styled.div`
 /* display: flex; */
 /* height: 50px; */
 /* flex-direction: row; */
-margin-left: 2rem;
+/* margin-left: 2rem; */
 `
 
 const ButtonContainer = styled.div`
