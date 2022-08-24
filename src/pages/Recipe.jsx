@@ -17,7 +17,7 @@ function Recipe() {
   }, [params.name])
 // console.log(details.extendedIngredients[0].original)
   return (
-    <DetailWrapper>
+    <DetailWrapper className="detail-wrapper">
       
       <div>
         <h2>{details.title}</h2>
@@ -47,6 +47,8 @@ function Recipe() {
     </DetailWrapper>
   )
 }
+
+
 
 const DetailWrapper = styled.div`
 margin-top: 10rem;
@@ -86,4 +88,6 @@ const Info = styled.div`
 /* flex-direction: row; */
 margin-left: 2rem;
 `
+
+console.log(DetailWrapper)
 export default Recipe

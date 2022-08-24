@@ -43,3 +43,24 @@ a{
 color: rgb(56, 56, 56);
 }
 
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+  
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 850px) {
+  .detail-wrapper{
+    flex-direction: column;
+  }
+}
+
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 992px) {
+  
+}
+
+/* Extra large devices (large desktops, 1200px and down) */
+@media (max-width: 1200px) {
+  
+}
