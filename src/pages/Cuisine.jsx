@@ -24,7 +24,7 @@ function Cuisine() {
   }, [params.type]);
 
   return (
-    <Grid
+    <Grid // special styling declared below
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
