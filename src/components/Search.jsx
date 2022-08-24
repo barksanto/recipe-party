@@ -20,7 +20,7 @@ function Search() {
         RecipeParty
         </Link>
       </div>
-      <div>
+      <div >
         <FaSearch ></FaSearch>
         <input onChange={(e) => setInput(e.target.value) } type="text" value={input } placeholder="Search... 🧐"/>
       </div>
@@ -31,18 +31,19 @@ function Search() {
 const FormStyle = styled.form`
   margin-top: 2rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-content: center;
   
   .logo-title{
     font-size: 2rem;
-    align-self: center;
+    text-align: center;
   }
 
   div{
     width: 100%;
     position: relative; 
+    text-align: center;
   }
-
 
 input{
   border: none;
@@ -56,9 +57,9 @@ input{
 }
 
 svg{
-  position: absolute;
+  position: relative;
   top: 50%;
-  left: 0%;
+  left: 30%;
   transform: translate(100%, -50%);
   color: white;
 }
