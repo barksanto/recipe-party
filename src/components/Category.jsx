@@ -44,11 +44,11 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-border-radius: 50%;
+border-radius: 8px;
 /* margin-right: 2rem; */
 text-decoration: none;
 background: linear-gradient(35deg, #494949, #313131);
-min-width: 6rem;
+min-width: 5rem;
 height: 6rem;
 cursor: pointer;
 transform: scale(0.7);
@@ -76,8 +76,6 @@ svg{
     color: #313131;
   }
 }
-
-
 `
 
 
