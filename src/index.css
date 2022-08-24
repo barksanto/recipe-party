@@ -35,8 +35,9 @@ h3 {
   font-size: 1.5rem;
   color: rgb(56, 56, 56);
   line-height: 2.5rem;
-  margin: 2rem 0rem;
+  /* margin: 2rem 0rem; */
   text-align: justify;
+  padding-left: 2rem;
 }
 
 
@@ -73,6 +74,10 @@ color: rgb(56, 56, 56);
     width: 80vw;
     margin-bottom: 5px;
     border-radius: 4px;
+  }
+
+  h3{
+    padding-left: 0;
   }
 }
 
