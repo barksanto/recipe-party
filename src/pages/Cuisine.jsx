@@ -52,7 +52,8 @@ grid-gap: 2rem;
 
 const Card = styled.div`
 img{
-  width: 90%;
+  /* width: 90%; */
+  width: 100%;
   border-radius: 2rem;
   align-self: center;
 }
