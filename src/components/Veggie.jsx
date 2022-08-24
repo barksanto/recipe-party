@@ -54,13 +54,18 @@ function Veggie() {
   )
 }
 
-
 const splideOptions = {
   perPage: 3,
   // arrows: false,
   drag: "free",
   gap: "2rem",
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  return window.innerWidth < 400 ? splideOptions.perPage = 1 : null
+})
+
+
 
 const Wrapper = styled.div`
 margin: 4rem 2rem;`;
