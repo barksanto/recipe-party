@@ -66,7 +66,7 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 const Wrapper = styled.div`
-margin: 4rem 2rem;`;
+margin: 4rem 1rem;`;
 
 const Card = styled.div`
 min-height: 25rem;

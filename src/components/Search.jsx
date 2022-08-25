@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react"; 
-import { FaSearch } from "react-icons/fa";
+// import { FaSearch } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom"
 
 
@@ -21,7 +21,7 @@ function Search() {
         </Link>
       </div>
       <div >
-        <FaSearch ></FaSearch>
+        {/* <FaSearch ></FaSearch> */}
         <input onChange={(e) => setInput(e.target.value) } type="text" value={input } placeholder="Search... 🧐"/>
       </div>
     </FormStyle>
@@ -58,8 +58,8 @@ input{
 
 svg{
   position: relative;
-  top: 50%;
-  left: 30%;
+  top: 60%;
+  left: 20%;
   transform: translate(100%, -50%);
   color: white;
 }

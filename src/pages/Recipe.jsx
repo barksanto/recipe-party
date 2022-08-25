@@ -8,21 +8,19 @@ function Recipe() {
   const [activeTab, setActiveTab] = useState('instructions')
 
   useEffect(() => {
-
     const fetchDetails = async () => {
     const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_SPOON_API_KEY}`)
     const detailData = await data.json()
     setDetails(detailData)
     }
-
-
-    try {
-      fetchDetails()
-    } catch(err) {
-      // catches errors both in fetch and response.json
-      console.log(err)
-      alert(err);
-    }
+    
+  try {
+    fetchDetails()
+  } catch(err) {
+    // catches errors both in fetch and response.json
+    alert(err);
+    console.log(err)
+  }
 
 
 
@@ -47,14 +45,14 @@ function Recipe() {
         </ButtonContainer>
        
         {activeTab === "instructions" && 
-          <div>
-          <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-          <h3 dangerouslySetInnerHTML={{__html: details.instructions}}></h3>
+          <div style={{padding: '0 10px'}}>
+            <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
+            <h3 dangerouslySetInnerHTML={{__html: details.instructions}}></h3>
           </div>
         }
       
         {activeTab === "ingredients" &&
-        <ul>
+        <ul style={{padding: '0 10px'}}>
           {
             details.extendedIngredients.map((ingredient) => {
               return <li key={ingredient.id}>{ingredient.original }</li>
