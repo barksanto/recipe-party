@@ -8,12 +8,28 @@ function Recipe() {
   const [activeTab, setActiveTab] = useState('instructions')
 
   useEffect(() => {
+
     const fetchDetails = async () => {
     const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_SPOON_API_KEY}`)
     const detailData = await data.json()
     setDetails(detailData)
-  }
-    fetchDetails()
+    }
+
+
+    try {
+      fetchDetails()
+    } catch(err) {
+      // catches errors both in fetch and response.json
+      console.log(err)
+      alert(err);
+    }
+
+
+
+
+
+
+    
   }, [params.name])
 // console.log(details.extendedIngredients[0].original)
   return (

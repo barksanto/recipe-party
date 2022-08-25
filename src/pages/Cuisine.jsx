@@ -9,11 +9,25 @@ function Cuisine() {
   let params = useParams() // @ use params from URL
 
   const getCuisine = async (name) => {
-    const data = await fetch(
+      const checkLocalStorage = localStorage.getItem("cuisine");
+
+    if (checkLocalStorage) {
+      setCuisine(JSON.parse(checkLocalStorage))
+
+    } else {
+        const data = await fetch(
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_SPOON_API_KEY}&cuisine=${name}`
     );
     const recipes = await data.json();
     setCuisine(recipes.results) // @ set state of cuisine to results of fetch
+    console.log(recipes)
+    }
+
+    // const data = await fetch(
+    //   `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_SPOON_API_KEY}&cuisine=${name}`
+    // );
+    // const recipes = await data.json();
+    // setCuisine(recipes.results) // @ set state of cuisine to results of fetch
     // console.log(recipes)
   }
 
@@ -23,6 +37,12 @@ function Cuisine() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params.type]);
 
+
+
+
+
+
+  
   return (
     <Grid // special styling declared below
       animate={{ opacity: 1 }}
